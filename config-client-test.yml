@@ -1,0 +1,11 @@
+server:
+  port: 7775
+
+spring:
+  application:
+    name: config-client
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://120.24.30.252:7001/eureka/
