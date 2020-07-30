@@ -6,11 +6,11 @@ spring:
     name: service-gateway
   cloud:
     gateway:
-      routes: #当访问http://localhost:8080/baidu,直接转发到https://www.baidu.com/
+      routes: #当访问 http://localhost:8401/heartbeat,直接转发到 http://heartbeat.top/
         - id: baidu_route
-          uri: http://baidu.com:80/
+          uri: http://heartbeat.top/
           predicates:
-            - Path=/baidu
+            - Path=/heartbeat
 
 eureka:
   client:
@@ -18,11 +18,11 @@ eureka:
       defaultZone: http://120.24.30.252:7001/eureka/
 
 logging: ## Spring Cloud Gateway的日志配置
-  level:
-    org.springframework.cloud.gateway: TRACE
-    org.springframework.http.server.reactive: DEBUG
-    org.springframework.web.reactive: DEBUG
-    reactor.ipc.netty: DEBUG
+ level:
+   org.springframework.cloud.gateway: TRACE
+   org.springframework.http.server.reactive: DEBUG
+   org.springframework.web.reactive: DEBUG
+   reactor.ipc.netty: DEBUG
 
 management:
   endpoints:
