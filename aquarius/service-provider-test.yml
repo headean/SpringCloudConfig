@@ -37,9 +37,9 @@ mybatis-plus:
       #不开启二级缓存
       cache-enabled: true
 
-shiro:
-  web:
-    enabled: false
+#shiro:
+#  web:
+#    enabled: false
 
 logging:
   level:
