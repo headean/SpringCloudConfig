@@ -10,6 +10,10 @@ eureka:
     service-url:
       defaultZone: http://120.24.30.252:7001/eureka/
 
+shiro:
+  web:
+    enabled: false
+
 management:
   security:
     enabled: false
