@@ -8,7 +8,7 @@ spring:
     gateway:
       routes: #当访问 http://localhost:8401/heartbeat,直接转发到 http://heartbeat.top/
         - id: baidu_route
-          uri: http://heartbeat.top/
+          uri: http://heartbeat.top:80/
           predicates:
             - Path=/heartbeat
 
